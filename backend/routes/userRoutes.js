@@ -5,10 +5,10 @@ const { generateToken, isAuth } = require('../utils')
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: '307048',
-        database: 'quizapp'
+        host: process.env.db_url,
+        user: process.env.db_username,
+        password: process.env.db_password,
+        database: process.env.db_name
     }
 })
 
