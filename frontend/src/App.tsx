@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './App.css'
 import NavMenu from './components/NavMenu'
 import Footer from './components/Footer'
@@ -17,7 +16,6 @@ import LeaderBoardScreen from './screens/LeaderBoardScreen'
 import AboutScreen from './screens/AboutScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import PasswordChange from './screens/PasswordChange'
-import Loader from './components/Loader'
 
 
 function App() {

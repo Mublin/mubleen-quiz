@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect } from 'react'
+import {useState, useContext, useEffect } from 'react'
 import {useNavigate, useParams } from 'react-router-dom'
 import { ScoreContext } from '../context/useScore';
 import axios from 'axios';
@@ -90,7 +90,7 @@ const SubjectPage = () => {
                     </div>
                   </div>
                   <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <button onClick={()=>nextHandler(chosenQue, questionTracker, selectedAnswer, answer, setSelectedAnswer, setQuestionTracker, subject)}>Next</button>
+                    <button onClick={()=>nextHandler(questionTracker, selectedAnswer, answer, setSelectedAnswer, setQuestionTracker, subject)}>Next</button>
                   </div>
                 </div>
                 )}

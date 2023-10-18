@@ -1,7 +1,6 @@
-import React, { ReactElement, createContext, useReducer, Dispatch } from "react"
-import { Question, User, wrongAnswerType } from '../utils/utils';
-import { NavigateFunction, useNavigate } from "react-router-dom"
-import axios from "axios";
+import React, { ReactElement, createContext, useReducer } from "react"
+import { Question, wrongAnswerType } from '../utils/utils';
+import { useNavigate } from "react-router-dom"
 
 type StateType = {
     score: number
@@ -52,8 +51,8 @@ const useScoreContext = (initialState : StateType) => {
 
 
 
-    const nextHandler = (questions: Question[], questionTracker: number, selectedAnswer: string | null, 
-        answer: number, setSelectedAnswer: React.Dispatch<React.SetStateAction<string | null>>, setQuestionTracker : React.Dispatch<React.SetStateAction<number>>, subject: any) : void | NavigateFunction =>{
+    const nextHandler = ( questionTracker: number, selectedAnswer: string | null, 
+        answer: number, setSelectedAnswer: React.Dispatch<React.SetStateAction<string | null>>, setQuestionTracker : React.Dispatch<React.SetStateAction<number>>, subject: any) : void =>{
         const getChosenIndex = (answerSelected: any): number => {
             const ans = state.chosenQue[questionTracker].options.find(x=> x == answerSelected) ? state.chosenQue[questionTracker].options.indexOf(answerSelected) : -1
                 return ans
@@ -116,9 +115,9 @@ type useScoreContextType = ReturnType<typeof useScoreContext>
 
 const initialContextState : useScoreContextType = {
     state: initState,
-    nextHandler: (questions: Question[], questionTracker: number, 
+    nextHandler: ( questionTracker: number, 
         selectedAnswer: string | null, answer: number, setSelectedAnswer: React.Dispatch<React.SetStateAction<string | null>>, 
-        setQuestionTracker: React.Dispatch<React.SetStateAction<number>>, subject:any):void | NavigateFunction=> {},
+        setQuestionTracker: React.Dispatch<React.SetStateAction<number>>, subject:any):void => {},
     startHandler: (): void =>{},
     queHandler: (quest: Question[]): void => {}
 }

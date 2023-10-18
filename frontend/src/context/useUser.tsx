@@ -1,5 +1,5 @@
-import React, { ReactElement, createContext, useReducer } from "react"
-import { User, getError } from '../utils/utils';
+import { ReactElement, createContext, useReducer } from "react"
+import { User } from '../utils/utils';
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { toast } from "react-toastify";

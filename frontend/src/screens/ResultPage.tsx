@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import { ScoreContext } from '../context/useScore'
 import { UserContext } from '../context/useUser'
 import { getError, subjectSelector} from '../utils/utils'

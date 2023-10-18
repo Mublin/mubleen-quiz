@@ -1,6 +1,5 @@
-import React from 'react'
 import {Link} from 'react-router-dom'
-import CountdownTimer from '../components/Counter'
+
 const SubjectPage = () => {
   return (
     <div className='subject'>

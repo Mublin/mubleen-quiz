@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState, MouseEvent, useContext, useEffect, ChangeEvent } from 'react'
+import { useState, MouseEvent, useContext, useEffect, ChangeEvent } from 'react'
 import { toast } from 'react-toastify'
 import { getError } from '../utils/utils'
 import { UserContext } from '../context/useUser'

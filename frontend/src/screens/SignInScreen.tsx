@@ -1,9 +1,8 @@
-import React, { ChangeEvent, MouseEvent, useContext, useEffect, useState } from 'react'
-import { ScoreContext } from '../context/useScore'
+import { ChangeEvent, MouseEvent, useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { REDUCER_ACTION_TYPE, UserContext } from '../context/useUser'
 import { toast } from 'react-toastify'
-import { User, getError } from '../utils/utils'
+import { getError } from '../utils/utils'
 import axios from 'axios'
 
 const SignInScreen = () => {
