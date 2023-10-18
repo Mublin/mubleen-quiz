@@ -1,4 +1,3 @@
-const { mathQuestions, englishQuestions, physicsQuestions, biologyQuestions, chemistryQuestions } = require("./data/data");
 const jwt = require('jsonwebtoken')
 const generateToken = (user) =>{
     return jwt.sign({
