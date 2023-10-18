@@ -22,7 +22,7 @@ const LeaderBoardScreen = () => {
     useEffect(()=>{
         const fetchData =async()=>{
             try {
-                const {data} : {data : Leaders} = await axios.get(`http://localhost:2023/api/quiz/${subject}/leaderboard`)
+                const {data} : {data : Leaders} = await axios.get(`/api/quiz/${subject}/leaderboard`)
                 if (data) {
                     setIsLoading(false)
                     setLeaders(data.leaders)

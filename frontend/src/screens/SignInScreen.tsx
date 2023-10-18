@@ -29,7 +29,7 @@ const SignInScreen = () => {
                         physics: number;
                         biology: number;
                     }
-            }} = await axios.post(`http://localhost:2023/api/users/signin`, {
+            }} = await axios.post(`/api/users/signin`, {
             password,
             username
         })

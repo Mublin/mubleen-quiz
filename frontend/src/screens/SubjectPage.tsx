@@ -31,7 +31,7 @@ const SubjectPage = () => {
             newTime: number,
             targetTime: number
           }
-          } = await axios.get(`http://localhost:2023/api/quiz/${subject}`)
+          } = await axios.get(`/api/quiz/${subject}`)
           if (data && data.questions) {
             queHandler(data.questions)
             setIsLoading(false) 

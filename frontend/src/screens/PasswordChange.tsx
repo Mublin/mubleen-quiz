@@ -20,7 +20,7 @@ const PasswordChange = () => {
                 data: {
                     message: string
                 }
-            } = await axios.put(`http://localhost:2023/api/users/changepassword`, {
+            } = await axios.put(`/api/users/changepassword`, {
                 password,
                 nPassword
             }, {

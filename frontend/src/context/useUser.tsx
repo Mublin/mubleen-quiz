@@ -53,7 +53,7 @@ const useUserContext = (initialState : StateType) => {
                         physics: number;
                         biology: number;
                     }
-            }} = await axios.post(`http://localhost:2023/api/users/register`, {
+            }} = await axios.post(`/api/users/register`, {
                 name,
                 password,
                 email,

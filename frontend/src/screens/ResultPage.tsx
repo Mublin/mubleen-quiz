@@ -22,7 +22,7 @@ const ResultPage = () => {
             try {
                 if (scor && subj && user) {
                   if (scor > user.highScoresubject[subj]) {
-                    await axios.put(`http://localhost:2023/api/quiz/${subj}/score`, {
+                    await axios.put(`/api/quiz/${subj}/score`, {
                       score: scor,
                       username: user.username
                     }, {

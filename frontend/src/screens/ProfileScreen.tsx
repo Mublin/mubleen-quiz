@@ -18,7 +18,7 @@ const ProfileScreen = () => {
     e.preventDefault()
     try {
       if (name !== user?.name || email !== user.email) {
-        await axios.put(`http://localhost:2023/api/users/change`, {
+        await axios.put(`/api/users/change`, {
           name,
           email,
           username: user?.username
@@ -44,7 +44,7 @@ const ProfileScreen = () => {
           name: string
           email: string
           username: string
-        }} = await axios.get(`http://localhost:2023/api/users/${user?.username}`, {
+        }} = await axios.get(`/api/users/${user?.username}`, {
           headers: {
             Authorization: `BEARER ${user?.token}`
           }
